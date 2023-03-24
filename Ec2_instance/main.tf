@@ -8,6 +8,7 @@ resource "aws_instance" "ec2-instance" {
     ami = "${var.ami_id}"
     instance_type = "${var.instance_type}"
     count = "${var.number_of_instances}"
+    security_groups = "$(var.security_group)"
     subnet_id = "${var.subnet_id}"
     key_name = "${var.key_pair_name}"
     
