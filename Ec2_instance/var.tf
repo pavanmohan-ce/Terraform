@@ -12,6 +12,11 @@ variable "instance_type" {
         default     = "t2.micro"
 }
 
+variable "security_group" {
+        description = "This is my isecurity group"
+        default     = "sg-0be40661ed64713e4"
+}
+
 variable "subnet_id" {
         description = "The VPC subnet the instance(s) will be created in"
         default = "subnet-05a13954158a4046c"
